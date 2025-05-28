@@ -456,6 +456,7 @@ ul.dropdown a:hover {
   gap: 2rem;
   padding: 2rem;
   text-align: center;
+  width: 100%;
 }
 
 .card-special {
@@ -517,7 +518,7 @@ ul.dropdown a:hover {
 
 /* 50/50 - oversigt vine */
 
-.fittyfitty2 {
+.fittyfitty {
   max-width: 80%;               /* Begrænser bredden til 80% af skærmen */
   display: flex;                /* Bruger flexbox til layout */
   margin: 0 auto;               /* Centrerer containeren vandret */
@@ -528,15 +529,15 @@ ul.dropdown a:hover {
   margin-bottom: 150px;
 }
 
-/* Styler <div> med billedet inde i .fittyfitty2 */
-.fittyfitty2 div {
+/* Styler <div> med billedet inde i .fittyfitty */
+.fittyfitty div {
   height: auto;                 /* Automatisk højde efter indhold */
   width: 50%;                   /* Fylder halvdelen af bredden */
   text-align: center;           /* Centrerer indholdet horisontalt */
 }
 
-/* Styler <section> med teksten inde i .fittyfitty2 */
-.fittyfitty2 section {
+/* Styler <section> med teksten inde i .fittyfitty */
+.fittyfitty section {
   width: 50%;                   /* Fylder halvdelen af bredden */
   display: flex;                /* Flex layout inde i sektionen */
   flex-direction: column;       /* Indhold stables vertikalt */
@@ -551,7 +552,7 @@ ul.dropdown a:hover {
 }
 
 /* Styling af "Læs mere"-linket */
-.fittyfitty2 a {
+.fittyfitty a {
   background-color: #A66161;    /* Baggrundsfarve */
   display: inline-block;        /* Gør linket til en blok med højde/bredde */
   align-self: flex-start;       /* Justér placering i venstre side af flexcontainer */
@@ -595,7 +596,7 @@ div.stars {
   display: inline-block;
   font-weight: 500;
   transition: all 300ms ease;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 30px;
 }
 
@@ -610,15 +611,15 @@ div.stars {
 /* For skærme op til 768px bredde (mobiler/tablets): */
 @media screen and (max-width: 768px) {
 
-  .fittyfitty2 {
+  .fittyfitty {
     max-width: 100%;            /* Udnyt hele bredden */
     flex-direction: column;     /* Stabl elementer vertikalt i stedet for side om side */
     margin: 0px;
     margin-bottom: 30px;
   }
 
-  .fittyfitty2 div,
-  .fittyfitty2 section {
+  .fittyfitty div,
+  .fittyfitty section {
     width: 100%;                /* Fyld hele bredden på små skærme */
     margin: 0px;                /* Fjerner margin for at undgå scroll */
     text-align: center;         /* Centrerer tekst og billeder */
@@ -626,11 +627,11 @@ div.stars {
     padding: 20px;
   }
 
-  .fittyfitty2 div img {
+  .fittyfitty div img {
     width: 30%;                 /* Gør billedet mindre på små skærme */
   }
 
-  .fittyfitty2 a {
+  .fittyfitty a {
     display: block;             /* Gør linket til blok-element */
     margin: 0 auto;             /* Centrerer linket horisontalt */
   }
@@ -680,7 +681,7 @@ div.stars {
 }
 
 
-/* Styler <div> med billedet inde i .fittyfitty2 */
+/* Styler <div> med billedet inde i .fittyfitty */
 .vin-presentation div {
   height: auto;                 /* Automatisk højde efter indhold */
   width: 50%;                   /* Fylder halvdelen af bredden */
@@ -847,7 +848,6 @@ div.rating-badge {
     width: 80%;
     margin: 0 auto; /* Centrerer sektionen horisontalt */
 
-    margin-top: 50px;
     margin-bottom: 50px;
 
 }
