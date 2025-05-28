@@ -601,9 +601,14 @@ div.stars {
   display: inline-block;
   font-weight: 500;
   transition: all 300ms ease;
-  font-size: 10px;
+  font-size: 15px;
   margin-top: 30px;
-  margin-bottom: 50px;
+}
+
+.btn_vin:hover {
+  background: #8B4C4C;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 
@@ -806,7 +811,7 @@ hr {
   flex-direction: row;          /* Elementer placeres vandret */
   flex-wrap: wrap;              /* Tillader linjeskift, hvis der ikke er plads */
   margin-bottom: 150px; 
-  margin-top: 50px; 
+  margin-top: 70px; 
 }
 
 div.review {
@@ -831,24 +836,131 @@ div.rating-badge {
   margin-bottom: 10px;
 }
 
-.anmeldelser a {
-  background-color: #A66161;
-  color: white;
-  padding: 10px;
-  font-family: "work sans";
-  font-size: 15px;
-}
-
 @media screen and (max-width: 768px) {
 
   .anmeldelser {
     margin: 30px;
   }
-
-   
 }
 
+/* Oplevelser på vingården */
 
+.oplevelser_havblink {
+    display: flex;
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border: #000000 1px solid; /* Tilføjer en sort kant rundt om hele sektionen */
+    width: 80%;
+    margin: 0 auto; /* Centrerer sektionen horisontalt */
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.oplevelser_havblink div{
+    width:40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Lodret centrering */
+}
+
+.oplevelser_havblink section{
+    width:60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Lodret centrering */
+    align-items: flex-start;
+}
+
+.oplevelser_havblink section p {
+    max-width: 600px;
+    font-size: 16px;
+}
+
+.oplevelser_havblink div img {
+    width:100%;
+}
+
+.oplevelser_havblink h2{
+    font-family: "playfair display", sans-serif;
+    color: #3D495D;
+}
+
+.oplevelser_havblink a {
+    background-color: #A66161;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-family: "worksans", sans-serif;
+    display: inline-block; /* Gør linket til en blok med højde/bredde */
+    font-size: 10px; /* Justerer skriftstørrelsen */
+}
+
+/* RESPONSIVE REGLER:*/
+/* Særregler for mobiler: */
+@media screen and (max-width:768px){
+
+  .oplevelser_havblink {
+    flex-direction: column;   /* Elementer stables lodret */
+    width: 80%;              /* Fylder hele bredden */
+    padding: 20px;            /* Evt. mindre padding på mobil */
+  }
+    
+  .oplevelser_havblink div,
+  .oplevelser_havblink section {
+    width: 100%;              /* Fylder hele bredden hver især */
+    text-align: center;       /* Centrerer tekst og billede (valgfrit) */
+    align-items: center;      /* Centrerer indhold i section (flexbox) */
+  }
+
+  .oplevelser_havblink section {
+    order: 2; /* Gør at teksten kommer under billedet */
+  }
+
+  .oplevelser_havblink div {
+    order: 1;
+  }
+
+  .oplevelser_havblink a {
+    margin-top: 20px;
+  }
+
+  .oplevelser_havblink div img {
+    width: 80%;               /* Gør billedet mindre på mobil (juster efter behov) */
+  }
+}
+
+/* Oplevelser vinsmagning */
+
+article.vinartikel h4 {
+  margin-top: 30px;
+}
+
+#datoer li {
+  list-style: none;
+}
+
+#farveroed {
+  color: #FF0000;
+}
+
+#farvegul {
+  color: #878147;
+}
+
+#farvegroen {
+  color: #489D48;
+}
+
+.vinartikel.vinsmagning ul li {
+  font-size: 15px;
+}
+
+.wrapper .info-top p {
+  font-size: 18px;
+}
 
 
 

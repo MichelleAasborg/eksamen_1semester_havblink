@@ -20,8 +20,8 @@
     >
 
     <link rel="stylesheet" href="voreshistorie.css">
+    
 </head>
-
 <body>
 
 <header>
@@ -45,7 +45,7 @@
             </li>
 
             <li>
-                <a href="#" class="active">Havblink Hvidvin <span class="dropdown-icon">&#9662;</span></a>
+                <a href="#">Havblink Hvidvin <span class="dropdown-icon">&#9662;</span></a>
                 <ul class="dropdown">
                     <li><a href="oversigtvine.html">Vores vine</a></li>
                     <li><a href="#">Bliv klog på vin</a></li>
@@ -53,7 +53,7 @@
                 </ul>
             </li>
 
-            <li><a href="#">Oplevelser</a></li>
+            <li><a href="oplevelser.html" class="active">Oplevelser</a></li>
             <li><a href="#">Mad til vin</a></li>
             <li><a href="#">Gårdbutikken</a></li>
             <li><a href="#">Anmeldelser</a></li>
@@ -64,131 +64,79 @@
 
 <main>
 
-     <!-- Hero sektion -->
+    <!-- Hero sektion -->
 
       <section class="welcome">
         <div class="hero">
           <img src="images/baggrund_omhavblink.jpg" alt="herobillede af vinmark">
           <div class="overlay-image-center">
-            <h5>HAVBLINK HVIDVIN</h5>
-            <h2>Vores vine</h2>
+            <h5>Oplevelser</h5>
+            <h2>Oplevelser på vingården</h2>
           </div>
         </div>
       </section>
 
-      <!-- Smykke menu -->
-      <section class="allevine-section">
-        <div class="allevine-menu">
-          <a href="#" class="active">Solaris Classic</a>
-          <a href="#">Solaris Floral</a>
-          <a href="#">Solaris Floral</a>
-          <a href="#">Solaris Solea</a>
-          <a href="#">Solaris Nord</a>
+      <section class="wrapper">
+        <div class="info-top">
+            <p>Hos Havblink Hvidvin, forener vi håndværk, bæredygtighed og sydfynsk natur i hver eneste flaske. Vi lader vinene fortælle deres egen historie gennem nøje udvalgte druer, nænsom produktion og økologiske metoder. Her kan du gå på opdagelse i vores udvalg og finde den vin, der passer netop til din smag og oplevelse.
+            </p>
         </div>
       </section>
 
-     <hr class="section-divider">
 
-     <div class="vin-presentation">
-
-        <div>
-            <img src="images/vinsmage.png" alt="Vinflaske Solaris Classic">
+        <div class="oplevelser_havblink">
+            <section>
+                <h3>
+                    Vinsmagning
+                </h3>
+                <p>Smag på et udvalg af vores vine, mens vi fortæller om, hvad der gemmer sig i glasset og hvordan det hele blev til. 
+                <br>Vi deler vores egne oplevelser og små historier fra hverdagen i marken og kælderen – og vi lover, det bliver hverken højtideligt eller svært. Bare god vin, godt selskab og en stund, hvor der er plads til både grin og nysgerrighed.
+                </p>
+                <a href="vinsmagning.html" class="btn_vin">Læs mere her</a>
+            </section>
+            <div id="vine">
+                <img src="images/oplevelser_vingård.jpg" alt="Employees">
+            </div>
         </div>
 
-        <section>
-            <h2>
-            Solaris Nord
-            </h2>
-
-        <div class="rating">
-            <p>4,3</p>
-            <div class="stars">⭐⭐⭐⭐</div>
+         <div class="oplevelser_havblink">
+            <section>
+                <h3>
+                    Rundvisning
+                </h3>
+                <p>Tag med ud i vores vinmarker, hvor vi følger vinens rejse fra jord til flaske, og hvordan det danske klima påvirker resultatet af produktet. 
+                <br>Vi fortæller om arbejdet med druerne, de små sejre og udfordringer, og hvordan vi arbejder med, og ikke imod - naturen. Det er uformelt, ærligt og helt nede på jorden. 
+                </p>
+                <a href="#" class="btn_vin">Læs mere her</a>
+            </section>
+            <div id="vine">
+                <img src="images/oplevelser_rundvisning.jpg" alt="Employees">
+            </div>
         </div>
 
-        <div class="vin-fremhaev">
-            <p>Solaris Classic er en elegant, frisk og let aromatisk hvidvin med noter af grønne æbler, citrus og et strejf af hyldeblomst.     
-            <br>Vinen byder på en sprød syre og en balanceret fylde, som gør den ideel til lette retter eller blot som et køligt glas i solen.
-            </p>
-            <p id="overskrift"><strong>Vi fremhæver:</strong></p>
+        <hr class="section-divider">
 
-            <p>Pris: 199 kr.</p>
-
-            <hr>
-
-            <p>100 % Solaris – en robust og aromatisk drue.</p>
-
-            <hr>
-
-            <p>Frisk og let aromatisk med noter af grønne æbler, citrus og et strejf af hyldeblomst.</p>
-
-            <hr>
-
-            <p>12 % vol. – balanceret og velegnet til både mad og som terrassevin.</p>
-
-            <hr>
-
-            <p>Serveringstemperatur: 8–10 °C</p>
-
-            <hr>
-
-            <p>Velegnet til Fisk, skaldyr, lette pastaretter og som aperitif </p>
-            <p class="forslag-til-retter"><a href="#">Se forslag til retter her &raquo;</a></p>
-
-            <hr>
-        </div>
-
-            <a href="#" class="btn_vin">Læs mere om vinen her</a>
-
-    </section>
-    </div>
-
-    <!--Anmeldelser sektion-->
-
-    <section class="anmeldelser">
-
-        <h3>Anmeldelser</h3>
-
-        <div class="review">
-            <div class="rating-badge">⭐ 4,3</div>
-            <p class="minoplevelse">"Fantastisk dansk vin! Solaris Classic overraskede virkelig med sin sprøde syre og noter af citrus og hyldeblomst. En perfekt vin til en sommeraften på terrassen. Klar favorit herhjemme!" <span>– Line M., København</span></p>
-        </div>
-
-        <div class="review">
-            <div class="rating-badge">⭐ 4,5</div>
-            <p class="minoplevelse">"Imponerende vin – troede ikke, en dansk vin kunne smage sådan! Let perlende, frugtig og virkelig læskende. Den gik perfekt til min skaldyrssalat. Kan varmt anbefales." <span>– Mette J., Silkeborg</span></p>
-        </div>
-
-        <div class="review">
-            <div class="rating-badge">⭐ 4,1</div>
-            <p class="minoplevelse">"Fin vin, men ikke helt min smag. Den har en markant friskhed med tydelige noter af grønne æbler og citrus, som kan virke lidt skarp, hvis man foretrækker mere bløde og runde hvidvine. Men hvis du er til sprøde, friske vine med et hint af hyldeblomst, så er Solaris Classic bestemt et godt bud." <span>– Jesper L., Odense</span></p>
-        </div>
-
-        <a href="#" class="btn_vin">Vis flere anmeldelser</a>
-    </section>
-
-    <hr class="section-divider">
-
-    <section class="wrapper-ny">
+        <section class=wrapper-ny>
         <div class="info-top-ny">
             <h3>
             Læs også om
             </h3>
         </div>
 
-       <div class="loefte">
+        <div class="loefte">
             <div class="card-special laesom">
-            <a href="baeredygtighed_klima.html"><img src="images/bæredygtighed_klima_laesom.jpg" alt="" class="løfte">
-            <p>Bæredygtighed og Klima &raquo;</p></a>
+                <a href="baeredygtighed_klima.html"><img src="images/bæredygtighed_klima_laesom.jpg" alt="" class="løfte">
+                <p>Bæredygtighed og Klima &raquo;</p></a>
             </div>
 
             <div class="card-special laesom">
-            <a href="#"><img src="images/vintilmad_laesom.jpg" alt="" class="løfte">
-            <p>Vores vine &raquo;</p></a>
+                <a href="#"><img src="images/vintilmad_laesom.jpg" alt="" class="løfte">
+            <p>Vin til mad &raquo;</p></a>
             </div>
 
             <div class="card-special laesom">
-            <a href=""><img src="images/oplevelser_laesom.jpg" alt="" class="løfte">
-            <p>Oplevelser der gør indtryk &raquo;</p></a>
+                <a href="voreshistorie.html"><img src="images/voreshistorie_laesom.jpg" alt="" class="løfte">
+            <p>Vores historie &raquo;</p></a>
             </div>
         </div>
       </section>
@@ -225,7 +173,6 @@
         </div>
       </div>
 </footer>
-
     
 </body>
 </html>
