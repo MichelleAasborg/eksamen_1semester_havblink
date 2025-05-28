@@ -11,7 +11,7 @@ body {
     font-family: "work sans";
     overflow-x: hidden;
     background-color: #E1DCD7;
-
+    margin-top: 80px;
 }
 
 h2 {
@@ -105,13 +105,6 @@ p {
 h4 {
     font-size: 16px;
 }
-}
-
-
-body {
-  background-color: #E1DCD7;
-  font-family: 'Inter', sans-serif;
-  margin-top: 80px;
 }
 
 .logo__img {
@@ -363,7 +356,8 @@ ul.dropdown a:hover {
 
 .info-top {
   max-width: 600px;
-  margin-bottom: 2rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .info-cards {
@@ -823,8 +817,8 @@ div.review {
 .anmeldelser h3 {
   text-align: center;
   font-family: "work sans";
-  font-size: 30px;
-  color: #8D8100;
+  font-size: 25px;
+  color: #3D495D;
   margin-top: 20px;
 }
 
@@ -887,15 +881,6 @@ div.rating-badge {
 .oplevelser_havblink h2{
     font-family: "playfair display", sans-serif;
     color: #3D495D;
-}
-
-.oplevelser_havblink a {
-    background-color: #A66161;
-    padding: 10px 20px;
-    color: #ffffff;
-    font-family: "worksans", sans-serif;
-    display: inline-block; /* Gør linket til en blok med højde/bredde */
-    font-size: 10px; /* Justerer skriftstørrelsen */
 }
 
 /* RESPONSIVE REGLER:*/

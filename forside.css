@@ -7,8 +7,10 @@
 }
 
 body {
-    font-family: "work sans", sans-serif;
+    font-family: "work sans";
+    overflow-x: hidden;
     background-color: #E1DCD7;
+    margin-top: 80px;
 }
 
 span {
@@ -71,6 +73,14 @@ p {
   line-height: 160%;
 
   font-family: "Work Sans", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 @media screen and (max-width: 768px) {
