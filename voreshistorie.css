@@ -75,6 +75,14 @@ a {
   transform: translateY(-2px);
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 /*Generel @media*/
 
 
@@ -103,6 +111,7 @@ h4 {
 body {
   background-color: #E1DCD7;
   font-family: 'Inter', sans-serif;
+  margin-top: 80px;
 }
 
 .logo__img {
@@ -214,6 +223,10 @@ ul.dropdown a:hover {
         display: block;
     }
 
+    #nav-links li a {
+        background: #919978;
+    }
+
     #toggle-nav:checked ~ #nav-links {
         opacity: 1;
         left: 0;
@@ -264,6 +277,8 @@ ul.dropdown a:hover {
 }
 
 }
+
+
 
 
 @media screen and (max-width: 600px) {
@@ -631,6 +646,211 @@ div.stars {
     justify-content: center; /*Centrere child elements vandret*/
   }
 }
+
+/* Vinen Solaris Classic */
+
+.allevine-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.allevine-menu a {
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px solid transparent;
+}
+
+.allevine-menu a.active,
+.allevine-menu a:hover {
+  border-color: #000000;
+}
+
+.vin-presentation {
+  max-width: 100%;               
+  display: flex;                /* Bruger flexbox til layout */
+  margin: 0 auto;               /* Centrerer containeren vandret */
+  flex-direction: row;          /* Elementer placeres vandret */
+  align-items: center;          /* Vertikal centrering af børn */
+  flex-wrap: wrap;              /* Tillader linjeskift, hvis der ikke er plads */
+  margin-top: 100px;             /* Giver luft over sektionen */
+}
+
+
+/* Styler <div> med billedet inde i .fittyfitty2 */
+.vin-presentation div {
+  height: auto;                 /* Automatisk højde efter indhold */
+  width: 50%;                   /* Fylder halvdelen af bredden */
+  text-align: center;           /* Centrerer indholdet horisontalt */
+}
+
+/* Styler <section> med teksten inde i .fittyfitty2 */
+.vin-presentation section {
+  width: 50%;                   /* Fylder halvdelen af bredden */
+  display: flex;                /* Flex layout inde i sektionen */
+  flex-direction: column;       /* Indhold stables vertikalt */
+  
+}
+
+/* Styling af "Læs mere"-linket */
+.vin-presentation a {
+  background-color: #A66161;    /* Baggrundsfarve */
+  display: inline-block;        /* Gør linket til en blok med højde/bredde */
+  align-self: flex-start;       /* Justér placering i venstre side af flexcontainer */
+  padding: 10px;                /* Indvendig afstand */
+  font-family: "work sans";     /* Skrifttype */
+  color: white;                 /* Tekstfarve */
+}
+
+/* Styling af beskrivelsen med kursiv */
+.kursiv {
+  margin-bottom: 10px;          /* Luft under beskrivelsen */
+  font-style: italic;           /* Kursiv tekst */
+}
+
+
+/* Wrapper til bedømmelse og stjerner */
+.rating {
+  display: flex;                /* Flex layout for at placere tal og stjerner side om side */
+  align-items: center;          /* Vertikal centrering */
+  gap: 5px;                     /* Luft mellem tal og stjerner */
+  margin-bottom: 20px;          /* Luft under rating-sektionen */
+}
+
+/* Styling af bedømmelsestal (fx 4,3) */
+.rating p {
+  font-size: 30px;              /* Stor skriftstørrelse */
+  font-weight: bold;           /* Fed tekst */
+}
+
+div.stars {
+  padding: 0;               /* Fjern unødvendig padding */
+  width: max-content;       /* Gør elementet så bredt som dets indhold */
+  display: inline-block;    /* Sørger for, at det opfører sig korrekt */
+}
+
+div.vin-fremhaev {
+  text-align: left;
+  width: 80%;
+}
+
+.forslag-til-retter a {
+  background: none;
+  padding: 0;
+  color: #000;
+  font-family: "work sans"; 
+  font-size: 15px;
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#overskrift {
+  margin-bottom: 20px;
+}
+
+.vin-presentation section a {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .vin-presentation {
+    max-width: 100%;            /* Udnyt hele bredden */
+    flex-direction: column;     /* Stabl elementer vertikalt i stedet for side om side */
+    margin-top: 0;
+  }
+
+  .vin-presentation div,
+  .vin-presentation section {
+    width: 100%;                /* Fyld hele bredden på små skærme */
+    margin: 0px;                /* Fjerner margin for at undgå scroll */
+    text-align: center;         /* Centrerer tekst og billeder */
+    padding-right: 0;
+    padding: 20px;
+  }
+
+  .vin-presentation div img {
+    width: 80%;                 /* Gør billedet mindre på små skærme */
+  }
+
+  .vin-presentation a {
+    display: block;             /* Gør linket til blok-element */
+    margin: 0 auto;             /* Centrerer linket horisontalt */
+  }
+
+  div.stars {
+    padding: 0; /*Fjerner den indvendige afstand (padding)*/
+    width: max-content; /*Sørger for, at bredden automatisk passer til det indhold*/
+    display: inline-block; /*ændres fra block element så den hodler sin egen bredde/højde*/
+  }
+
+  .rating {
+    justify-content: center; /*Centrere child elements vandret*/
+  }
+}
+
+/* Anmeldelser */
+
+.anmeldelser {
+  max-width: 900px;               
+  display: flex;                /* Bruger flexbox til layout */
+  margin: 0 auto;               /* Centrerer containeren vandret */
+  flex-direction: row;          /* Elementer placeres vandret */
+  flex-wrap: wrap;              /* Tillader linjeskift, hvis der ikke er plads */
+  margin-bottom: 150px; 
+  margin-top: 50px; 
+}
+
+div.review {
+  border: #000000 1px solid;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.anmeldelser h3 {
+  text-align: center;
+  font-family: "work sans";
+  font-size: 30px;
+  color: #8D8100;
+  margin-top: 20px;
+}
+
+div.rating-badge {
+  background-color: #BBC2CE;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.anmeldelser a {
+  background-color: #A66161;
+  color: white;
+  padding: 10px;
+  font-family: "work sans";
+  font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .anmeldelser {
+    margin: 30px;
+  }
+
+   
+}
+
+
+
+
 
 /*footer styling*/
 
