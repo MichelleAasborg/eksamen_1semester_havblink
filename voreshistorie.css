@@ -47,6 +47,7 @@ a {
   color: black;
 }
 
+
 .section-divider {
   border: none;
   border-top: 3px solid #c0b9b9;
@@ -419,7 +420,7 @@ ul.dropdown a:hover {
   margin-left: 50px;
   line-height: 1.5;
   font-family: "work sans";
-  font-size: 18px;
+  font-size: 16px;
 }
 
 
@@ -453,6 +454,22 @@ ul.dropdown a:hover {
     border-radius: 10px;
     box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
     background: #EAEAEA;
+}
+
+/* Økologi sektion - fra Bæredygtighed og klima*/
+
+.oekologi {
+  position: relative;
+  background-image: url("images/oekologi.png"); /* din store Ø-mærke-baggrund */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  .oekologi {
+    background-image: none;
+  }
 }
 
 /* Læs mere om */
@@ -491,7 +508,9 @@ ul.dropdown a:hover {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
+
 .footer-logo img {
   margin-top: 50px;
   height: 30px;
@@ -547,6 +566,5 @@ ul.dropdown a:hover {
   .social-icons {
     justify-content: center;
   }
-
 }
 
