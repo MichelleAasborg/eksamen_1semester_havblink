@@ -30,10 +30,6 @@ h3 {
    margin-top: 20px;
 }
 
-h4 {
-
-}
-
 p {
   font-family: "worksans", sans-serif;
   font-size: 16px;
@@ -134,7 +130,7 @@ header {
 }
 
 .logo {
-    height: 40px;
+    height: 30px;
 }
 
 #nav-links {
@@ -963,19 +959,21 @@ article.vinartikel h4 {
   margin-top: 20px;
 }
 
-.card {
-  max-width: 500px;
+.card_mad {
+  max-width: 600px;
   overflow: hidden;
   margin: 20px;
+  text-align: center;
 }
 
-.card img {
-  width: 80%;
+.card_mad img {
+  width: 100%;
   height: auto;
   transition: transform 0.3s ease;
 }
 
-.card a:hover {
+
+.card_mad a:hover img {
   transform: scale(1.05);
 }
 
