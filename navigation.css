@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "work sans", sans-serif;
+}
+
+nav {
+    width: 100%; /*Eventuelt skifte tilbage til 1100px*/
+    height: 80px;
+    margin: 0 auto; /*sørger for at vores navigation centreres når den kommer forbi de 1100 px*/
+    padding: 0 2em; /*Der er brugt em så den bliver relativ i forhold til den font størrelse der er sat*/
+    background-color: #919978;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+}
+
+.logo {
+    height: 40px;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+}
+
+#nav-links li a {
+    display: block;
+    color: black;
+    padding: 0.5em 1em;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#toggle-nav,
+#toggle-nav-btn-open,
+#toggle-nav-btn-close {
+    display: none;
+}
+
+#toggle-nav-btn-open,
+#toggle-nav-btn-close {
+    font-size: 3rem;
+}
+
+/*Dropdown menu*/
+
+#nav-links li {
+    position: relative; /* nødvendig for at .dropdown positioneres korrekt */
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; /* Ikke +10px – nu ligger den direkte under linket */
+  left: 0;
+  background-color: #3D495D;
+  padding: 10px 0;
+  min-width: 180px;
+  display: none; /* skjult som standard */
+  z-index: 200;
+  list-style: none;
+}
+
+ul.dropdown a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+ul.dropdown a:hover {
+  font-weight: bold;
+}
+
+#nav-links li a:hover .dropdown {
+  display: block;
+}
+
+/* Vis dropdown ved hover */
+#nav-links li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    #nav-links {
+        position: absolute;
+        height: calc(100% - 80px);
+        opacity: 0;
+        width: 50%; /*Bredden på vores slidefunktion*/
+        top: 80px;
+        left: -100%;
+        background-color: #919978;
+    
+        z-index: 100; /*Denne er sat til -1 i videoen*/
+        display: block;
+    }
+
+    #toggle-nav:checked ~ #nav-links {
+        opacity: 1;
+        left: 0;
+    }
+
+    #toggle-nav-btn-open {
+        display: inline-block;
+    }
+
+    #toggle-nav:checked ~ label #toggle-nav-btn-open {
+        display: none;
+    }
+
+    #toggle-nav:checked ~ label #toggle-nav-btn-close {
+        display: inline-block;
+    }
+
+    #nav-links:hover .dropdown {
+    display: none;
+  }
+
+#nav-links li:hover .dropdown {
+  display: none;
+}
+
+#nav-links li:focus-within .dropdown {
+    display: block;
+  }
+
+.dropdown {
+    position: static;
+    background: #919978;
+    padding: 0;
+  }
+
+#nav-links a.active {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+ul.dropdown a {
+  padding-left: 40px;
+  color: black !important;
+}
+
+ul.dropdown a:hover {
+  font-weight: normal;
+}
+
+}
+
+
+@media screen and (max-width: 600px) {
+    #nav-links {
+        width: 100%;
+    }
+
+}
+
+/*footer styling*/
+
+.footer {
+  background-color: #919978;
+  color: #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.footer-logo img {
+  margin-top: 50px;
+  height: 30px;
+}
+
+.footer-kolonner {
+  display: flex;
+  gap: 150px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.footer-kolonne h3 {
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #000;
+}
+
+.footer-kolonne p {
+    font-size: 15px;
+    
+}
+
+.social-icons img {
+  margin-top: 20px;
+  width: auto;
+  height: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    margin-top: 0;
+  }
+    
+  .footer-kolonner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  .footer-kolonne {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+}
