@@ -636,7 +636,7 @@ div.stars {
   div.stars {
     padding: 0; /*Fjerner den indvendige afstand (padding)*/
     width: max-content; /*Sørger for, at bredden automatisk passer til det indhold*/
-    display: inline-block; /*ændres fra block element så den hodler sin egen bredde/højde*/
+    display: inline-block; /*ændres fra block element så den holder sin egen bredde/højde*/
   }
 
   .rating {
@@ -644,7 +644,7 @@ div.stars {
   }
 }
 
-/* Vinen Solaris Classic */
+/* Vinen Solaris Classic */ 
 
 .allevine-menu {
   display: flex;

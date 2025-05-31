@@ -9,47 +9,45 @@ body {
 }
 
 nav {
-    width: 100%; /*Eventuelt skifte tilbage til 1100px*/
-    height: 80px;
-    margin: 0 auto; /*sørger for at vores navigation centreres når den kommer forbi de 1100 px*/
+    width: 100%; /*Navigationen fylder 100% af skærmen*/
+    height: 80px; /*Højden på navigationen*/
     padding: 0 2em; /*Der er brugt em så den bliver relativ i forhold til den font størrelse der er sat*/
     background-color: #919978;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Sørger for at sætte logo og links på samme linje */
+    justify-content: space-between; /* Placerer logo og links i hver sin ende */
+    align-items: center; /* Centrerer indholdet vertikalt */
     z-index: 200;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
+  position: fixed; /* Gør at headeren scroller med siden */
+  top: 0; /* Placere headeren helt øverst i browserens visningsvindue */
+  left: 0; /* Placere headeren helt til venstre i browserens visningsvindue */
+  width: 100%; /* Gør at headeren fylder hele bredden af browserens visningsvindue */
+  z-index: 999; /* Sørger for at headeren er ovenpå alt andet indhold */
 }
 
 .logo {
-    height: 40px;
+    height: 40px; /* Højden på logoet */
 }
 
 #nav-links {
-    list-style: none;
-    display: flex;
-    transition: all 0.2s ease-in-out;
+    list-style: none; /* Fjerner standard punkttegn fra listen */
+    display: flex; /* Placere mine links på række */
 }
 
 #nav-links li a {
-    display: block;
+    display: block; /* Giver mere kontrol og gør at jeg kan tilføje padding/margin */
     color: black;
     padding: 0.5em 1em;
     font-size: 15px;
-    text-decoration: none;
+    text-decoration: none; /* Fjerner understregning på links */
 }
 
 #toggle-nav,
 #toggle-nav-btn-open,
 #toggle-nav-btn-close {
-    display: none;
+    display: none; /* Skjuler min toggle-nav checkbox som standard */
 }
 
 #toggle-nav-btn-open,
@@ -65,14 +63,14 @@ header {
 
 .dropdown {
   position: absolute;
-  top: 100%; /* Ikke +10px – nu ligger den direkte under linket */
-  left: 0;
+  top: 100%; /* Placerer dropdown under det overordnede element */
+  left: 0; /* Justerer dropdown til venstre for det overordnede element */
   background-color: #3D495D;
   padding: 10px 0;
-  min-width: 180px;
+  min-width: 180px; /* Minimum bredde for dropdown-menuen */
   display: none; /* skjult som standard */
   z-index: 200;
-  list-style: none;
+  list-style: none; /* Fjerner standard punkttegn fra dropdown-menuen */
 }
 
 ul.dropdown a {
@@ -84,9 +82,6 @@ ul.dropdown a:hover {
   font-weight: bold;
 }
 
-#nav-links li a:hover .dropdown {
-  display: block;
-}
 
 /* Vis dropdown ved hover */
 #nav-links li:hover .dropdown {
@@ -101,32 +96,36 @@ ul.dropdown a:hover {
 @media screen and (max-width: 768px) {
     #nav-links {
         position: absolute;
-        height: calc(100% - 80px);
+        height: calc(100% - 80px); /* Højden bliver 100% minus 80px, og det er fordi med position absolute, så flytter det sig på hele skærmenm ne menuen i toppen, vil forblive der, det er kun UL vi fjerner væk fra dens struktur */
         opacity: 0;
         width: 50%; /*Bredden på vores slidefunktion*/
-        top: 80px;
-        left: -100%;
-        background-color: #919978;
+        top: 80px; /* rykker det ned 80px fra toppen, så det ikke lapper ud over logo */
+        left: -100%; /* Skjuler som udgangspunkt menuen udenfor skærmen */
+        
     
-        z-index: 100; /*Denne er sat til -1 i videoen*/
-        display: block;
+        z-index: -1; /*For at den ikke skal lappe ind over topmenuen */
+        display: block; /* Denne fordi vores ul ikke længere har brug for en flextype, for at den kan vise elementerne under hinanden */
     }
 
     #nav-links li a {
-        background: #919978;
-    }
+        background: #919978; /* Jeg var nødsaget til at sætte en baggrundsfarve ind på links, da den ikke slog igennem på baggrundsfarven i nav-links, som jeg oprindeligt havde sat, for at den fyldte 100% i højden.*/
+    } 
 
-    #toggle-nav:checked ~ #nav-links {
+    /* Toggle-nav checkbox for at vise/hide menuen - Når checkbox er checked, så skal vi ind og åbne vores UL og ændre på opacity, som på left  */
+
+    #toggle-nav:checked ~ #nav-links { /* Her er der brugt checked logikken, til at sige om den er markeret - For at den tager fast i min navlinks har jeg
+      brugt en bølgeselector ~, som betyder at den tager det element der kommer efter checkboxen - Selvom vi tjekker på hvorvidt input felt er markeret,
+      så skal den ikke arbejde med selve input feltet, men finde det næste felt der kommer efterfølgende - altså nav-links feltet */
         opacity: 1;
-        left: 0;
+        left: 0; /* Når den er checked, så skal den ikke længere være udenfor - men have venstrekant af vores slider til position 0*/
     }
 
     #toggle-nav-btn-open {
-        display: inline-block;
+        display: inline-block; /*synliggør burgermenuen */
     }
 
     #toggle-nav:checked ~ label #toggle-nav-btn-open {
-        display: none;
+        display: none; /*Når flueben er sat skal burgermenuen fjernes og vise krydset */
     }
 
     #toggle-nav:checked ~ label #toggle-nav-btn-close {
@@ -142,7 +141,7 @@ ul.dropdown a:hover {
 }
 
 #nav-links li:focus-within .dropdown {
-    display: block;
+    display: inline-block;
   }
 
 .dropdown {
@@ -158,7 +157,7 @@ ul.dropdown a:hover {
 
 ul.dropdown a {
   padding-left: 40px;
-  color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 ul.dropdown a:hover {
