@@ -33,7 +33,7 @@ h3 {
 p {
   font-family: "worksans", sans-serif;
   font-size: 16px;
-  white-space: pre-wrap;
+  white-space: pre-wrap; /* Bevarer linjeskift i teksten */
 
   line-height: 1.4;
 }
@@ -45,10 +45,10 @@ a {
 
 
 .section-divider {
-  border: none;
-  border-top: 3px solid #c0b9b9;
-  margin: 4rem auto;
-  width: 90%;
+  border: none; /* Fjerner standard kant */
+  border-top: 3px solid #c0b9b9; /* Tilføjer en grå horisontal linje */
+  margin: 4rem auto; /* Vertikal afstand + centreret */
+  width: 90%;   /* Linjen fylder 90% af forældreelementet */
 }
 
 .btn {
@@ -56,7 +56,7 @@ a {
   color: #ffffff;
   padding: 8px 32px;
   border: 2px solid #646464;
-  display: inline-block;
+  display: inline-block; /* Gør knappen inline men med block-egenskaber */
   font-weight: 500;
   transition: all 300ms ease;
   font-size: 10px;
@@ -71,6 +71,11 @@ a {
   transform: translateY(-2px);
 }
 
+
+.logo__img {
+  height: 30px;
+  display: block;
+}
 
 
 /*Generel @media*/
@@ -97,17 +102,13 @@ h4 {
 }
 }
 
-.logo__img {
-  height: 30px;
-  display: block;
-}
+
+/*Navigation */
 
 #nav-links a.active {
   border-bottom: 2px solid black;
   padding-bottom: 0;
 }
-
-/*Navigation */
 
 nav {
     width: 100%; /*Eventuelt skifte tilbage til 1100px*/
@@ -122,7 +123,7 @@ nav {
 }
 
 header {
-  position: fixed;
+  position: fixed; /* Gør at headeren scroller med siden */
   top: 0;
   left: 0;
   width: 100%;
@@ -134,8 +135,8 @@ header {
 }
 
 #nav-links {
-    list-style: none;
-    display: flex;
+    list-style: none; /* Fjern punktopstilling */
+    display: flex; /* Vandret layout af links */
     transition: all 0.2s ease-in-out;
 }
 
@@ -144,9 +145,10 @@ header {
     color: black;
     padding: 0.5em 1em;
     font-size: 15px;
-    text-decoration: none;
+    text-decoration: none; /* Fjern understregning */
 }
 
+/* --- TOGGLE NAVIGATION (BURGERMENU) - SKJULT SOM STANDARD --- */
 #toggle-nav,
 #toggle-nav-btn-open,
 #toggle-nav-btn-close {
@@ -182,11 +184,11 @@ ul.dropdown a {
 }
 
 ul.dropdown a:hover {
-  font-weight: bold;
+  font-weight: bold; /* Fremhæv ved hover */
 }
 
 #nav-links li a:hover .dropdown {
-  display: block;
+  display: block; 
 }
 
 /* Vis dropdown ved hover */
@@ -199,6 +201,8 @@ ul.dropdown a:hover {
     color: white;
     text-decoration: none;
 }
+
+/* --- MOBIL LAYOUT FOR NAVIGATION --- */
 
 @media screen and (max-width: 768px) {
     #nav-links {
@@ -269,9 +273,6 @@ ul.dropdown a:hover {
 
 }
 
-
-
-
 @media screen and (max-width: 600px) {
     #nav-links {
         width: 100%;
@@ -313,6 +314,8 @@ ul.dropdown a:hover {
     font-family: "work sans";
 }
 
+/* media query for responsive design */
+
 @media (max-width: 768px) {
   .overlay-image-center {
     display: flex; /* Gør det til en flex container igen */
@@ -346,8 +349,8 @@ ul.dropdown a:hover {
 
 .wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* Indhold stables vertikalt */
+  align-items: center; 
   text-align: center;
   padding: 2rem;
 }
@@ -360,7 +363,7 @@ ul.dropdown a:hover {
 
 .info-cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Tillader linjeskift hvis der ikke er plads */
   justify-content: center;
   gap: 2rem;
 }
@@ -380,6 +383,8 @@ ul.dropdown a:hover {
   height: auto;
   margin-bottom: 1rem;
 }
+
+/* media query for info top */
 
 @media screen and (max-width: 768px) {
     .info-top {
@@ -467,7 +472,7 @@ ul.dropdown a:hover {
 
 .oekologi {
   position: relative;
-  background-image: url("images/oekologi.png"); /* din store Ø-mærke-baggrund */
+  background-image: url("images/oekologi.png"); /*Stor Ø-mærke-baggrund */
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
@@ -500,7 +505,7 @@ ul.dropdown a:hover {
     box-shadow: none;
 }
 
-
+/* Responsivitet for Løfte sektionen */
 
 @media (max-width: 768px) {
   .loefte {
@@ -604,7 +609,7 @@ div.stars {
 }
 
 
-/* --------- RESPONSIVE DESIGN --------- */
+/* --------- RESPONSIVE DESIGN for fittyfitty --------- */
 /* For skærme op til 768px bredde (mobiler/tablets): */
 @media screen and (max-width: 768px) {
 
